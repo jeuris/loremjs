@@ -348,7 +348,7 @@ var Lorem;
     };
 
     //Register as jQuery
-    if (typeof jQuery != 'undefined') {
+    if (typeof jQuery !== 'undefined') {
         (function($) {
             $.fn.lorem = function() {
                 $(this).each(function() {
@@ -357,13 +357,8 @@ var Lorem;
                     //data-lorem can be taken with data function (thanks to http://forrst.com/people/webking)
                     lorem.query = $(this).data('lorem');
                     lorem.createLorem(this);
-                })
+                });
             };
-
-            //If developer run this javascript, then we can run the lorem.js
-            $(document).ready(function() {
-                $('[data-lorem]').lorem();
-            });
         })(jQuery);
     }
 
