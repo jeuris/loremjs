@@ -37,6 +37,7 @@
 		form:after { content: ""; display: table; clear: both; }
 		input { float: right; margin: 0; position: relative; top: 5px; width: 70%; }
 		.circ { border-radius: 50%; border: 3px solid #000; display: inline-block; float: left; height: 38px; width: 38px; margin-right: 10px; padding-top: 5px; text-align: center; }
+		.circ.active { background-color: #000; color: #fff; }
 		.wrap { margin: 0 auto; width: 420px; }
 		.logo { margin-right: 5px; position: relative; top: 7px; width: 42px; }
 		@media (max-width: 480px) {
@@ -48,7 +49,7 @@
 	<div class="wrap">
 		<h1>Extince Ipsum</h1>
 		<form action="#" oninput="amount.value=paragraphs.value">
-			<a id="tohtml" class="circ" href="#">&lt;&gt;</a>
+			<a id="tohtml" class="circ" href="#" title="Add paragraph tags">&lt;&gt;</a>
 			<output class="circ" name="amount" for="paragraphs">1</output>
 			<label for="paragraphs"></label>
 			<input id="paragraphs" name="paragraphs" type="range" min="1" max="10" value="1" />
@@ -74,7 +75,9 @@
 	<script>
 		(function () {
 			$(document).ready(function () {
-				var $lorem = $('#lorem');
+				var $lorem = $('#lorem'),
+					$tohtml = $('#tohtml'),
+					html = false;
 
 				$lorem.lorem();
 
@@ -83,14 +86,39 @@
 						.empty()
 						.data('lorem', e.target.value + 'p')
 						.lorem();
+
+					if (html) {
+						addHTML();
+					}
 				});
-				$('#tohtml').click(function (e) {
+				$tohtml.click(function (e) {
+					e.preventDefault();
+
+					html = !html;
+
+					$(this).toggleClass('active');
+
+					if (html) {
+						addHTML();
+					} else {
+						removeHTML();
+					}
+				});
+
+				function addHTML () {
 					$lorem.find('p').each(function (index, data) {
 						$(this)
 							.prepend('&lt;p&gt;')
 							.append('&lt;/p&gt;');
 					});
-				});
+				}
+
+				function removeHTML () {
+					$lorem.find('p').each(function (index, data) {
+						$(this)
+								.html($(this).html().replace('&lt;p&gt;', '').replace('&lt;/p&gt;', ''));
+					});
+				}
 			});
 		}());
 	</script>
