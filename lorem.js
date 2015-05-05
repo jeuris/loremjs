@@ -216,7 +216,7 @@ var Lorem;
         "die", "is", "gek", "ik", "bedoel", "succes", "hebben", "is", "een", "maar", "arrogant", "worden", "is", "iets", "heeeeeeel", "anders", "je", "weet", "toch?", "en", "als",
         "je", "dan", "ook", "nog", "begint", "te", "lijken", "op", "die", "dronken", "zwerver", "die", "zomaar", "ineens", "het", "verkeer", "begint", "te", "regelen", "midden",
         "op", "een", "druk", "kruispunt", "dan", "zeg", "ik", "kijk", "dan", "ook", "niet", "raar", "op", "als", "je", "voor", "je", "sokken", "wordt", "gereden", "ik", "bedoel",
-        "je", "bent", "just", "kiddin", "like", "hiddink", "maar", "toch", "uhhhhh", "latertje", "da's", "die", "binnenlandse", "funk", "binnenlandse", "funk", "da's", "gewoon",
+        "je", "bent", "just", "kiddin", "like", "Hiddink", "maar", "toch", "uhhhhh", "latertje", "da's", "die", "binnenlandse", "funk", "binnenlandse", "funk", "da's", "gewoon",
         "die", "style", "die", "funk", "van", "het", "binnenland", "je", "weet", "je", "weet", "het", "toch?", "da's", "die", "binnenlandse", "funk", "yo", "Extince", "yo",
         "Extince", "yo", "yo", "yo", "Extince", "(4x)", "jawel", "'k", "zweef", "in", "de", "90", "vriend", "de", "regels", "komen", "naar", "je", "toe", "quasi", "nonchalant",
         "en", "zeggen", "wat-waar-hoe?", "maar", "ik", "kijk", "in", "de", "spiegel", "en", "zeg:", "broeder", "hou", "het", "echt?", "maar", "de", "spiegel", "breekt", "en",
